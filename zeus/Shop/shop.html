@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="logo.ico.png" type="image/x-icon">
+
+    <title>Shop</title>
+
+    <!--box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--custom css-->
+    <link rel="stylesheet" href="shop.css">
+
+</head>
+
+<body>
+
+    <!--header design-->
+    <header class="header">
+        <a href="#" class="logo"><img src="logo.png"></a>
+
+        <i class='bx bx-menu'id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="/mainpage/mainpage.html" >Home</a>
+            <a href="/Shop/shop.html"class="active">Shop</a>
+            <a href="/Comments/comments.html">Feedback</a>
+            <a href="/Quiz/Quiz.html">Quiz</a>
+            <a href="/student details/studentDetails.html">About Us</a>
+            <a href="/Sitemap/sitemap.html">Site Map</a>
+            <a href="/Gallery/gallery.html">Gallery</a>
+            
+           
+        </nav>
+        <div class="checkout-button pointer" onclick="opencheckout('#order')">
+            <a href="#"><i class='bx bx-cart'></i></a>
+            <span id="items_in_cart"></span>
+        </div>
+    </header>  
+
+
+
+  
+ 
+
+
+<div id="shop_section">
+  <section id="sport_products" class="shop_items">
+    
+    <div class="items">
+      <div class="shop_item">
+        <img src="cap.png" alt="caps">
+        <span class="item_name">Zeus Cap</span>
+        <span class="item_price">LKR 1500.00</span>
+        <div class="price_Container">
+          <label class="quantity">Quantity
+            <input id="1_quantity" type="number" min="1" max="10" value="1">
+          </label>
+          <button id="1_item" data-itemname="caps" data-price="1500" class="add_to_cart" onclick="AddToCart(this.id)">
+            <span>Quick Add</span>
+            <i class="S_icon" style="vertical-align: middle;"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="shop_item">
+        <img src="tshirt.png" alt="T-Shirt">
+        <span class="item_name">Zeus Tee</span>
+        <span class="item_price">LKR 2500.00</span>
+        <div class="price_Container">
+          <label class="quantity">Quantity
+            <input id="2_quantity" type="number" min="1" max="10" value="1">
+          </label>
+          <button id="2_item" data-itemname="T-Shirt" data-price="2500" class="add_to_cart" onclick="AddToCart(this.id)">
+            <span>Quick Add</span>
+            <i class="S_icon" style="vertical-align: middle;"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="shop_item">
+        <img src="short.png" alt="short">
+        <span class="item_name">Zeus Performance Short</span>
+        <span class="item_price">LKR 2000.00</span>
+        <div class="price_Container">
+          <label class="quantity">Quantity
+            <input id="3_quantity" type="number" min="1" max="10" value="1">
+          </label>
+          <button id="3_item" data-itemname="short" data-price="2000" class="add_to_cart" onclick="AddToCart(this.id)">
+            <span>Quick Add</span>
+            <i class="S_icon" style="vertical-align: middle;"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="shop_item">
+        <img src="bag.png" alt="bag">
+        <span class="item_name">Zeus Duffel Bag</span>
+        <span class="item_price">LKR 8500.00</span>
+        <div class="price_Container">
+          <label class="quantity">Quantity
+            <input id="4_quantity" type="number" min="1" max="10" value="1">
+          </label>
+          <button id="4_item" data-itemname="bag" data-price="8500" class="add_to_cart" onclick="AddToCart(this.id)">
+            <span>Quick Add</span>
+            <i class="S_icon" style="vertical-align: middle;"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="shop_item">
+        <img src="bo.png" alt="bottle">
+        <span class="item_name">Zeus Bottle</span>
+        <span class="item_price">LKR 1500.00</span>
+        <div class="price_Container">
+          <label class="quantity">Quantity
+            <input id="5_quantity" type="number" min="1" max="10" value="1">
+          </label>
+          <button id="5_item" data-itemname="bottle" data-price="1500" class="add_to_cart" onclick="AddToCart(this.id)">
+            <span>Quick Add</span>
+            <i class="S_icon" style="vertical-align: middle;"></i>
+          </button>
+        </div>
+      </div>
+
+      
+
+      <div class="shop_item">
+        <img src="shoes.png" alt="shoes">
+        <span class="item_name">Zeus Shoe</span>
+        <span class="item_price">LKR 10000.00</span>
+        <div class="price_Container">
+          <label class="quantity">Quantity
+            <input id="6_quantity" type="number" min="1" max="10" value="1">
+          </label>
+          <button id="6_item" data-itemname="shoes" data-price="10000" class="add_to_cart" onclick="AddToCart(this.id)">
+            <span>Quick Add</span>
+            <i class="S_icon" style="vertical-align: middle;"></i>
+          </button>
+        </div>
+      </div>
+      
+      
+    </div>
+  </section>
+</div>
+<div id="bgpic">
+  <section id="checkout-popout" class="d-none">
+            <span class="checkout-close pointer text-danger" onclick="closecheckout()">
+            
+            </span>
+
+    <div id="order">
+      <h2 class="orderhead">Your Order</h2>
+      <table id="table">
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th class="text-right">Price</th>
+        </tr>
+        </thead>
+        <tbody id="cart">
+        <tr>
+          <th>Total</th>
+          <td id="totalOrder">0 LKR</td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
+      <button class="placeOrder" onclick="location.href='#orderSummary'">Place the Order</button><br>
+      <button class="cancelOrder" onclick="closecheckout()">Cancel the Order</button>
+
+      <div id="orderSummary">
+        <h2 class="summaryheader">Order Summary</h2>
+        <label for="language"></label>
+        <select id="language" name="language">
+          <option  checked="" value="Eng">English</option>
+          <option value="sin">Sinhala</option>
+          <option value="china">Chinese</option>
+        </select><br>
+        <div class="container">
+
+          <form action="">
+
+            <div class="row">
+
+              <div class="col">
+
+                <h3 class="title">Billing Address</h3><br>
+
+                <div class="inputBox">
+                  <span>Full Name :</span>
+                  <input type="text" placeholder="Peter Parker">
+                </div>
+                <div class="inputBox">
+                  <span>Email :</span>
+                  <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                  <span>Address :</span>
+                  <input type="text" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox">
+                  <span>City :</span>
+                  <input type="text" placeholder="colombo">
+                </div>
+
+                <div class="flex">
+                  <div class="inputBox">
+                    <span>State :</span>
+                    <input type="text" placeholder="sri lanka">
+                  </div>
+                  <div class="inputBox">
+                    <span>Zip Code :</span>
+                    <input type="text" placeholder="123 456">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col">
+
+                <h3 class="title">Payment</h3><br>
+
+                <div class="inputBox">
+                  <span>Cards accepted :</span>
+                  <i class='bx bxl-visa'></i><i class='bx bxl-mastercard' ></i><i class='bx bxl-paypal' ></i>
+                </div>
+                <div class="inputBox">
+                  <span>Name on card :</span>
+                  <input type="text" placeholder="mr.Peter Parker">
+                </div>
+                <div class="inputBox">
+                  <span>Credit card number :</span>
+                  <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                  <span>Expired month :</span>
+                  <input type="text" placeholder="march">
+                </div>
+
+                <div class="flex">
+                  <div class="inputBox">
+                    <span>Expired year :</span>
+                    <input type="number" placeholder="2023">
+                  </div>
+                  <div class="inputBox">
+                    <span>CVV :</span>
+                    <input type="text" placeholder="1234">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <input type="submit" value="Pay Now" class="submit-btn">
+
+          </form>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+</div>
+</section>
+  <!-- footer -->
+
+  
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i> Copyrights 2023 ZEUS</p>
+        </div>
+        
+<!-- /footer -->
+<script src="shop.js"></script>
+    
+    </body>
+    </html>

@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+
+body{
+    background: #f4fefe;
+    color: #2d60b1;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100;
+    padding: 2rem 9%;
+    background: #f4fefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+
+}
+
+
+.navbar a {
+    font-size: 1.7rem;
+    color:#1b2527;
+    margin-left: 4rem;
+    transition: .3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+
+}
+#cart-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid #2d60b1;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #1b2527;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    
+}
+
+
+#cart-icon a:hover{
+    background: #2d60b1;
+    color: #f4fefe;
+    box-shadow: 0 0 1rem #1b2527;
+
+}
+
+.description-box{
+    border-radius: 80px;
+    border: 2px solid #1b2527;
+    color: #1b2527;
+    margin: 10px;
+    width:90% ;
+    height: 800px;
+}
+.description-box h1{
+    text-align: center;
+}
+.photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40rem;
+}
+.des{
+    padding: 2em;
+    font-size: medium;
+}
+.box{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}

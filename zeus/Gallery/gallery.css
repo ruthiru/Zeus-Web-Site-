@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+
+body{
+    background: #f4fefe;
+    color: #2d60b1;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100;
+    padding: 2rem 9%;
+    background: #f4fefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+
+}
+
+
+.navbar a {
+    font-size: 1.7rem;
+    color:#1b2527;
+    margin-left: 4rem;
+    transition: .3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #2d60b1;
+}
+
+
+#cart-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid #2d60b1;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #1b2527;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    
+}
+
+
+#cart-icon a:hover{
+    background: #2d60b1;
+    color: #f4fefe;
+    box-shadow: 0 0 1rem #1b2527;
+
+}
+body{
+    position: relative;
+}
+
+.img_gallery{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+
+.img_gallery_header{
+    margin-top: 100px;
+    width: 100vw;
+    height: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 5rem;
+}
+
+.image_container{
+    width: 80%;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    justify-self: center;
+}
+
+.image_container img{
+    width: 100%;
+}
+
+
+.container{
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    border: 2px solid #333
+}
+.colour{
+display: table-cell;
+width: 30px;
+height: 30px;
+margin: 0 1px;
+cursor: pointer;
+border:2px solid #fff;
+}
+.clr1 {
+    background-color: #1b2527;}
+.clr2 {
+    background-color: #2d60b1;}
+.clr3 {
+    background-color: cyan;}
+.clr4 {
+    background-color:#f4fefe;}
+    
+    #content {
+        font-size: 48px;
+        color: #ab6363;
+      }    
+
+.font-changer{
+    position: absolute;
+    right: 3px;
+    top:130px;
+}
+.copyright{
+    position: absolute;
+    top: 1200px;
+    font-size: 18px;
+}    
+    

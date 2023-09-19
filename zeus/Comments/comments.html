@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="icon" href="logo.ico.png" type="image/x-icon">
+        <!--box icons-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!--custom css-->
+        <link rel="stylesheet" href="Comments.css">
+</head>
+<body>
+      <!--header design-->
+      <header class="header">
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+
+        
+
+        <nav class="navbar">
+            <a href="/mainpage/mainpage.html" >Home</a>
+            <a href="/Shop/shop.html">Shop</a>
+            <a href="/Comments/comments.html" class="active">Feedback</a>
+            <a href="/Quiz/Quiz.html">Quiz</a>
+            <a href="/student details/studentDetails.html">About Us</a>
+            <a href="/Sitemap/sitemap.html">Site Map</a>
+            <a href="/Gallery/gallery.html">Gallery</a>
+            
+           
+        </nav>
+        <div id="cart-icon">
+            <a href="#"><i class='bx bx-cart'></i></a>
+        </div>  
+     </header>
+    
+<!---comment form--->
+<div class="comment-outer">
+  <form enctype="text/plain" method="post" id="comments" class="comment-form" action="mailto:zeusclothing31@gmail.com">
+      <div class="tile-1">
+        <br><br><br>
+          <p><h2>How satisfied were you with our website today?</h2></p>
+          <div class="radio-container">
+            <div class="rating">
+                <input type="radio" id="star10" name="rate" value="10">
+                <label for="star10" title="text"></label>
+                <input type="radio" id="star9" name="rate" value="9">
+                <label for="star9" title="text"></label>
+                <input type="radio" id="star8" name="rate" value="8">
+                <label for="star8" title="text"></label>
+                <input type="radio" id="star7" name="rate" value="7">
+                <label for="star7" title="text"></label>
+                <input type="radio" id="star6" name="rate" value="6">
+                <label for="star6" title="text"></label>
+                <input type="radio" id="star5" name="rate" value="5">
+                <label for="star5" title="text"></label>
+                <input type="radio" id="star4" name="rate" value="4">
+                <label for="star4" title="text"></label>
+                <input checked="" type="radio" id="star3" name="rate"  value="3">
+                <label for="star3" title="text"></label>
+                <input type="radio" id="star2" name="rate" value="2">
+                <label for="star2" title="text"></label>
+                <input type="radio" id="star1" name="rate" value="1">
+                <label for="star1" title="text"></label>
+            </div>
+
+          </div>
+      </div>
+      <div class="tile-2">
+        <br><br><br>
+          <label for="textReasons"><h2>Reasons for this rating</h2></label>
+          <div class="row">
+              <textarea required id="textReasons" name="review" rows="6" cols="75"></textarea>
+          </div>
+
+      </div>
+      <div class="tile-3">
+        <br><br>
+          <label for="selection1"><h2>How did you get to know about us</h2></label>
+          <select name="selection1" id="selection1" class="list">
+              <option disabled selected>--Through--</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Tik tok">Tik Tok</option>
+          </select>
+          
+
+      </div>
+     <!-- <div class="tile-4">
+        <br><br>
+          <label for="selection1"><h2>If you had to complete this task again,how would you prefer to do it?(optional)</h2></label>
+          <select name="selection1" id="selection2" class="list">
+              <option disabled selected>--Choose--</option>
+              <option value="Phone">Phone</option>
+              <option value="Website">Website</option>
+              <option value="Webchat">Webchat</option>
+              <option value="Social media">Social media</option>
+              <option value="Email">Email</option>
+          </select>
+
+      </div>-->
+      
+      <div class="button">
+        <input type="reset" id="clear-button" name="button" value="clear">
+          <button class="submit" type="submit" >Submit</button>
+          
+      </div>
+
+
+
+  </form>
+
+</div>
+<!---comment form--->
+  <!-- footer -->
+
+
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i> Copyrights 2023 ZEUS</p>
+        </div>
+     
+<!-- /footer -->
+
+<script src="comments.js"></script>
+  </body>
+  </html>    

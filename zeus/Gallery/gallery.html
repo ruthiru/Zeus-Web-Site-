@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="logo.ico.png" type="image/x-icon">
+
+    <title>Gallery</title>
+
+    <!--box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--custom css-->
+    <link rel="stylesheet" href="gallery.css">
+
+</head>
+
+<body>
+
+    <!--header design-->
+    <header class="header">
+        <a href="#" class="logo"><img src="logo.png"></a>
+
+
+        <nav class="navbar">
+            <a href="/mainpage/mainpage.html" >Home</a>
+            <a href="/Shop/shop.html">Shop</a>
+            <a href="/Comments/comments.html">Feedback</a>
+            <a href="/Quiz/Quiz.html">Quiz</a>
+            <a href="/student details/studentDetails.html">About Us</a>
+            <a href="/Sitemap/sitemap.html">Site Map</a>
+            <a href="/Gallery/gallery.html"class="active">Gallery</a>
+            
+           
+        </nav>
+        <div id="cart-icon">
+            <a href="#"><i class='bx bx-cart'></i></a>
+        </div>  
+    </header>
+    <div class="img_gallery">
+        <div class="img_gallery_header" id="img_gallery_header">
+            <h1 id="content">Gallery</h1>
+            <p class="font-changer">
+              
+              <button onclick="changeFontSize(28)">28px</button>
+              <button onclick="changeFontSize(36)">36px</button>
+              <button onclick="changeFontSize(48)">48px</button>
+            </p>
+        </div>
+        <div class="image_container">
+           <a href="/additionalpages/cap.html"><img src="cap.png" id="Image1" alt="thumb1"></a> 
+           <a href="/additionalpages/shoe.html"><img src="shoes.png" id="Image2" alt="thumb2"></a>
+           <a href="/additionalpages/short.html"><img src="short.png" id="Image5" alt="thumb3"></a>
+           <a href="/additionalpages/tshirt.html"><img src="tshirt.png" id="Image4" alt="thumb4"></a>
+           <a href="/additionalpages/hoodie.html"><img src="hoodie.png" id="Image3" alt="thumb5"></a>
+           <a href="/additionalpages/bag.html"><img src="bag.png" id="Image6" alt="thumb6"></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <span id="1" onclick="colour(this)" class="colour clr1" ></span>
+        <span id="2" onclick="colour(this)" class="colour clr2"></span>
+        <span onclick="colour(this)" class="colour clr4" ></span>
+    </div>
+      <!-- footer -->
+
+
+    
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i> Copyrights 2023 ZEUS</p>
+        </div>
+       
+
+<!-- /footer -->
+<script>
+
+
+    function colour(z){
+        var a  = getComputedStyle(z);
+        var b = a.backgroundColor;
+
+        if(b === 'rgb(255, 255, 255)'){
+            document.querySelector('#img_gallery_header').style.color = 'white';
+        }else{
+            document.querySelector('#img_gallery_header').style.color = 'black';
+        }
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = b;
+    }
+
+
+
+</script>
+<script>
+    function changeFontSize(size) {
+      document.getElementById("content").style.fontSize = size + "px";
+    }
+  </script>
+</body>
+
+</html>   
